@@ -60,8 +60,8 @@ const founders = [
     image: '/imgs/pfp_gabriel.jpg',
     primaryLink: 'https://main-portfolio-sigma-flame.vercel.app/',
     links: [
-      { label: 'Links', href: 'mailto:gutiajs@gmail.com' },
-      { label: 'GitHub', href: 'https://github.com/search?q=Gabriel+Felipe+Sabino+de+Souza&type=users' },
+      { label: 'Links', href: 'https://personal-link-tree-livid.vercel.app/' },
+      { label: 'Canal 2', href: 'https://www.youtube.com/@Kademaris' },
     ],
   },
   {
@@ -69,11 +69,7 @@ const founders = [
     name: 'João Victor Sampaio',
     role: 'Técnico de Consertos',
     image: '/imgs/pfp_joao.png',
-    primaryLink: 'mailto:joaovsampaio.dev@gmail.com',
-    links: [
-      { label: 'Links', href: 'mailto:joaovsampaio.dev@gmail.com' },
-      { label: 'GitHub', href: 'https://github.com/search?q=Joao+Victor+Sampaio&type=users' },
-    ],
+    links: [],
   },
 ]
 

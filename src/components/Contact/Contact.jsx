@@ -23,8 +23,8 @@ const contactInfo = [
   },
   {
     label: 'Instagram',
-    value: 'Instagram da SampTech',
-    href: 'https://www.instagram.com/',
+    value: '@samptechassistencia',
+    href: 'https://instagram.com/samptechassistencia',
     color: '#4f83a3',
     icon: '/imgs/Instagram.png',
   },

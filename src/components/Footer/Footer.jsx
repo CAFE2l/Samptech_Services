@@ -64,7 +64,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://www.instagram.com/"
+              href="https://instagram.com/samptechassistencia"
               target="_blank"
               rel="noreferrer"
               className={styles.socialBtn}

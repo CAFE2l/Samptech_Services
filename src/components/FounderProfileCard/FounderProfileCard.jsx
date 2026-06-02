@@ -11,6 +11,7 @@ const externalIcon = (
 export default function FounderProfileCard({ founder }) {
   const [isOpen, setIsOpen] = useState(false)
   const cardRef = useRef(null)
+  const hasPrimaryLink = Boolean(founder.primaryLink)
 
   useEffect(() => {
     if (!isOpen) return undefined
@@ -36,6 +37,11 @@ export default function FounderProfileCard({ founder }) {
   }, [isOpen])
 
   const openPrimaryLink = () => {
+    if (!hasPrimaryLink) {
+      setIsOpen(true)
+      return
+    }
+
     window.open(founder.primaryLink, '_blank', 'noopener,noreferrer')
   }
 
@@ -68,9 +74,9 @@ export default function FounderProfileCard({ founder }) {
     <motion.div
       ref={cardRef}
       className={styles.card}
-      role="link"
+      role={hasPrimaryLink ? 'link' : 'button'}
       tabIndex="0"
-      aria-label={`Abrir perfil de ${founder.name}`}
+      aria-label={hasPrimaryLink ? `Abrir perfil de ${founder.name}` : `Ver disponibilidade de links de ${founder.name}`}
       aria-haspopup="menu"
       aria-expanded={isOpen}
       onClick={handleClick}
@@ -96,7 +102,7 @@ export default function FounderProfileCard({ founder }) {
         </div>
       </div>
 
-      <div className={styles.tooltip}>Abrir perfil</div>
+      <div className={styles.tooltip}>{hasPrimaryLink ? 'Abrir perfil' : 'Ver links'}</div>
 
       <AnimatePresence>
         {isOpen && (
@@ -111,20 +117,24 @@ export default function FounderProfileCard({ founder }) {
             onClick={(event) => event.stopPropagation()}
           >
             <p className={styles.menuLabel}>Links rápidos</p>
-            {founder.links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                role="menuitem"
-                aria-label={`${link.label} de ${founder.name}`}
-                onClick={() => setIsOpen(false)}
-              >
-                <span>{link.label}</span>
-                {externalIcon}
-              </a>
-            ))}
+            {founder.links.length > 0 ? (
+              founder.links.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  role="menuitem"
+                  aria-label={`${link.label} de ${founder.name}`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <span>{link.label}</span>
+                  {externalIcon}
+                </a>
+              ))
+            ) : (
+              <p className={styles.emptyState}>Sem links no momento</p>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
