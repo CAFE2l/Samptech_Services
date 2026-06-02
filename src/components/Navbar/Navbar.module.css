@@ -4,20 +4,36 @@
   left: 0;
   right: 0;
   z-index: 50;
-  transition: background 0.3s, backdrop-filter 0.3s, box-shadow 0.3s;
+  border-bottom: 1px solid transparent;
+  transition: background 0.45s, backdrop-filter 0.45s, box-shadow 0.45s, border-color 0.45s;
 }
 
 .scrolled {
-  background: rgba(8, 12, 20, 0.85);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 1px 0 rgba(0, 212, 255, 0.1);
+  border-color: rgba(79, 131, 163, 0.14);
+  background: rgba(8, 12, 20, 0.72);
+  backdrop-filter: blur(22px) saturate(135%);
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(79, 131, 163, 0.08);
 }
 
 .logo span {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 500;
   font-size: 0.75rem;
-  color: #00d4ff;
+  color: #4f83a3;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(226, 232, 240, 0.12), 0 0 18px rgba(79, 131, 163, 0.16);
+  transition: transform 0.35s, box-shadow 0.35s;
+}
+
+.logo:hover .logoIcon {
+  transform: scale(1.06) rotate(-3deg);
+  box-shadow: 0 0 0 1px rgba(226, 232, 240, 0.22), 0 0 25px rgba(79, 131, 163, 0.3);
 }
 
 .navLink {
@@ -36,7 +52,7 @@
   left: 0;
   width: 0;
   height: 1px;
-  background: #00d4ff;
+  background: #4f83a3;
   transition: width 0.3s;
 }
 
@@ -49,18 +65,20 @@
 }
 
 .ctaBtn {
-  background: linear-gradient(135deg, #00d4ff, #7c3aed);
-  color: #080c14;
+  background: linear-gradient(135deg, #e2e8f0, #8fb8cf);
+  color: #08111d;
   font-weight: 700;
   font-size: 0.875rem;
   padding: 8px 20px;
   border-radius: 8px;
-  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 7px 22px rgba(79, 131, 163, 0.16);
+  transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .ctaBtn:hover {
   opacity: 0.9;
   transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(79, 131, 163, 0.28);
 }
 
 .menuBtn {
@@ -94,7 +112,7 @@
 
 .mobileMenu {
   background: rgba(8, 12, 20, 0.95);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(22px) saturate(130%);
   border-top: 1px solid rgba(0, 212, 255, 0.1);
 }
 

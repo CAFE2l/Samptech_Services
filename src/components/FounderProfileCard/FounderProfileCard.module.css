@@ -1,0 +1,154 @@
+.card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  min-height: 62px;
+  border: 1px solid rgba(22, 78, 115, 0.2);
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(145deg, rgba(13, 25, 43, 0.78), rgba(7, 14, 25, 0.68));
+  box-shadow: inset 0 1px 0 rgba(226, 232, 240, 0.04);
+  backdrop-filter: blur(16px);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.35s, box-shadow 0.35s, background 0.35s;
+}
+
+.card:hover,
+.card:focus-visible,
+.card[aria-expanded='true'] {
+  z-index: 3;
+  border-color: rgba(79, 131, 163, 0.62);
+  background: linear-gradient(145deg, rgba(17, 35, 58, 0.94), rgba(8, 17, 30, 0.86));
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.3), 0 0 30px rgba(79, 131, 163, 0.15), inset 0 1px 0 rgba(226, 232, 240, 0.08);
+}
+
+.card:focus-visible {
+  outline: 2px solid rgba(143, 184, 207, 0.9);
+  outline-offset: 3px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.avatar {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  color: #080c14;
+  background: linear-gradient(135deg, #dbe7ee, #6da9c9);
+  box-shadow: 0 0 0 2px rgba(79, 131, 163, 0.24), 0 0 18px rgba(79, 131, 163, 0.2);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile strong,
+.profile span {
+  display: block;
+}
+
+.profile strong {
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.profile span {
+  margin-top: 2px;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.tooltip {
+  position: absolute;
+  right: 15px;
+  bottom: calc(100% + 8px);
+  border: 1px solid rgba(79, 131, 163, 0.2);
+  border-radius: 6px;
+  padding: 4px 7px;
+  color: #94a3b8;
+  background: rgba(5, 10, 19, 0.92);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  font-size: 0.65rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.card:hover .tooltip,
+.card:focus-visible .tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+  min-width: 152px;
+  border: 1px solid rgba(79, 131, 163, 0.26);
+  border-radius: 10px;
+  padding: 7px;
+  background: rgba(5, 12, 22, 0.94);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38), 0 0 24px rgba(79, 131, 163, 0.11);
+  backdrop-filter: blur(20px) saturate(125%);
+}
+
+.menuLabel {
+  padding: 3px 6px 6px;
+  color: #64748b;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border-radius: 6px;
+  padding: 7px 6px;
+  color: #cbd5e1;
+  font-size: 0.72rem;
+  transition: color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+  color: #f8fafc;
+  background: rgba(79, 131, 163, 0.14);
+  outline: none;
+  transform: translateX(2px);
+}
+
+.menu svg {
+  color: #6da9c9;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .menu {
+    top: calc(100% - 4px);
+    right: 8px;
+  }
+}

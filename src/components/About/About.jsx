@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion'
+import FounderProfileCard from '../FounderProfileCard/FounderProfileCard'
 import styles from './About.module.css'
 
 const values = [
   {
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" strokeWidth="2">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f83a3" strokeWidth="2">
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
       </svg>
     ),
@@ -13,7 +14,7 @@ const values = [
   },
   {
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" strokeWidth="2">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f83a3" strokeWidth="2">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
@@ -22,7 +23,7 @@ const values = [
   },
   {
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" strokeWidth="2">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f83a3" strokeWidth="2">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
@@ -31,7 +32,7 @@ const values = [
   },
   {
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" strokeWidth="2">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f83a3" strokeWidth="2">
         <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" />
         <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
@@ -50,6 +51,31 @@ const item = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 }
+
+const founders = [
+  {
+    initials: 'GS',
+    name: 'Gabriel Felipe Sabino de Souza',
+    role: 'Programador Full-stack',
+    image: '/imgs/pfp_gabriel.jpg',
+    primaryLink: 'https://main-portfolio-sigma-flame.vercel.app/',
+    links: [
+      { label: 'Links', href: 'mailto:gutiajs@gmail.com' },
+      { label: 'GitHub', href: 'https://github.com/search?q=Gabriel+Felipe+Sabino+de+Souza&type=users' },
+    ],
+  },
+  {
+    initials: 'JV',
+    name: 'João Victor Sampaio',
+    role: 'Técnico de Consertos',
+    image: '/imgs/pfp_joao.png',
+    primaryLink: 'mailto:joaovsampaio.dev@gmail.com',
+    links: [
+      { label: 'Links', href: 'mailto:joaovsampaio.dev@gmail.com' },
+      { label: 'GitHub', href: 'https://github.com/search?q=Joao+Victor+Sampaio&type=users' },
+    ],
+  },
+]
 
 export default function About() {
   return (
@@ -79,18 +105,7 @@ export default function About() {
             </div>
 
             <div className={styles.founders}>
-              {[
-                { initials: 'GS', name: 'Gabriel Felipe Sabino de Souza', role: 'Co-fundador · Marketing & Atendimento' },
-                { initials: 'LC', name: 'Lucas Daniel Carvalho de Castilho', role: 'Co-fundador · Técnico' },
-              ].map((f) => (
-                <div key={f.initials} className={styles.founderCard}>
-                  <div className={styles.founderAvatar}>{f.initials}</div>
-                  <div>
-                    <strong>{f.name}</strong>
-                    <span>{f.role}</span>
-                  </div>
-                </div>
-              ))}
+              {founders.map((founder) => <FounderProfileCard key={founder.initials} founder={founder} />)}
             </div>
           </motion.div>
 

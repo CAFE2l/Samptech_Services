@@ -6,7 +6,7 @@ const diffs = [
     title: 'Presença Digital Profissional',
     desc: 'Site personalizado e redes sociais com design de qualidade, transmitindo credibilidade desde o primeiro contato.',
     icon: (
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="1.8">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#164e73" strokeWidth="1.8">
         <circle cx="12" cy="12" r="10" />
         <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" strokeLinecap="round" />
       </svg>
@@ -16,7 +16,7 @@ const diffs = [
     title: 'Marketing Educativo',
     desc: 'Conteúdo que educa: dicas de manutenção, explicação de problemas comuns e tutoriais práticos.',
     icon: (
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="1.8">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#164e73" strokeWidth="1.8">
         <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" /><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
@@ -25,7 +25,7 @@ const diffs = [
     title: 'Atendimento Personalizado',
     desc: 'Orçamentos detalhados, explicações claras e uma experiência superior às assistências tradicionais.',
     icon: (
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="1.8">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#164e73" strokeWidth="1.8">
         <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
@@ -34,7 +34,7 @@ const diffs = [
     title: 'Agilidade e Custo-Benefício',
     desc: 'Prazos curtos e preços justos. Mais vantajoso que as opções estabelecidas no mercado local.',
     icon: (
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="1.8">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#164e73" strokeWidth="1.8">
         <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),

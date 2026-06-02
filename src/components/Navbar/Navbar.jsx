@@ -36,11 +36,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <button onClick={() => handleNav('#hero')} className={`${styles.logo} flex items-center gap-2`}>
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #00d4ff, #7c3aed)' }}>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M2 4h12M2 8h8M2 12h5" stroke="#080c14" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-          </div>
+          <img className={styles.logoIcon} src="/imgs/favicon.png" alt="" />
           <div>
             <p className="text-white font-bold text-base leading-tight">SampTech</p>
             <span>Informática</span>
