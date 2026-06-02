@@ -1,0 +1,108 @@
+.section {
+  padding: 7rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #7c3aed;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.sectionLabel::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: #7c3aed;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #f1f5f9;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 2rem;
+  background: #0d1424;
+  border-radius: 16px;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  transition: border-color 0.3s, transform 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+  transform: translateY(-4px);
+}
+
+.cardIconWrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(124, 58, 237, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.card h3 {
+  color: #f1f5f9;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #475569;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.targetAudience {
+  margin-top: 5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.audienceCard {
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 212, 255, 0.12);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.03), rgba(124, 58, 237, 0.03));
+}
+
+.audienceCard h4 {
+  color: #00d4ff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 0.75rem;
+}
+
+.audienceCard p {
+  color: #64748b;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
